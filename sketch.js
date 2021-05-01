@@ -101,9 +101,10 @@ function draw() {
     spawnObstacles();
     spawnweapon();
     
-    if(mousePressedOver(uparrow)){
+    if(mousePressedOver(uparrow) || keyDown("space")){
     ninja.velocityY = -2;
-    jump.play();
+    camera.position.y = ninja.y;
+    //jump.play();
       
   }
     
